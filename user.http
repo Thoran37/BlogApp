@@ -1,0 +1,32 @@
+POST http://localhost:4000/user-api/register
+Content-Type: application/json
+
+{
+  "userType":"user",
+  "username":"thoran",
+  "password":"123456",
+  "email":"thoranmuvvala@gmail.com"
+}
+
+###
+POST http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+  "userType":"user",
+  "username":"Thoran",
+  "password":"123456"
+}
+
+###
+GET http://localhost:4000/user-api/articles
+
+###
+PUT http://localhost:4000/user-api/comment/1712064795
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRob3JhbiIsImlhdCI6MTcxMjA2NDA5MCwiZXhwIjoxNzEyMTUwNDkwfQ.INdLqWPsPH4lMrQHzTCJ_Ci1bqoRJ7G6Z3hlanLOeho
+Content-Type: application/json
+
+{
+  "username":"babu",
+  "comment":"Superficial"
+}
