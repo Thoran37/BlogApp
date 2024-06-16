@@ -60,8 +60,10 @@ userApp.get('/articles', verifyToken, expressAsyncHandler(async (req, res) => {
 // Post comments on an article by articleId
 userApp.put('/comment/:id', verifyToken, expressAsyncHandler(async (req, res) => {
   const comment = req.body
-  const id = req.params.id
+  const id = +req.params.id
+  console.log(id)
   let result = await articleObj.updateOne({ articleId: id }, { $addToSet: { comments: { username: comment.username, comment: comment.comment } } })
+  console.log(result)
   let art = await articleObj.findOne({ articleId: id })
   res.send({ message: "Comment added", payload: art })
 }))

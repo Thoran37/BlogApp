@@ -56,6 +56,7 @@ export default function ArticleById() {
   async function addComment(obj) {
     obj.username = currentUser.username
     let id = state.articleId
+    console.log(obj)
     let res = await axiosWithToken.put(`http://localhost:4000/user-api/comment/${id}`, obj)
     console.log(res)
     console.log(res.data.payload)

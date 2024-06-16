@@ -1,7 +1,14 @@
 import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 
 export default function AdminProfile() {
+
+  let navigate = useNavigate()
+  function logout() {
+    localStorage.removeItem('token')
+    navigate('/')
+  }
+
   return (
     <div className='m-5'>
       <div className="mb-4 fs-5 active" style={{ backgroundColor: '#15F5BA' }}>
@@ -23,6 +30,7 @@ export default function AdminProfile() {
           </li>
         </ul>
       </div>
+      <button className='btn btn-danger fs-4' style={{ float: "right" }} onClick={logout}>Log Out</button>
       <Outlet />
     </div>
   )
