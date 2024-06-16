@@ -8,6 +8,12 @@ require('dotenv').config()
 // To parse body of request
 app.use(exp.json())
 
+// CORS
+const cors = require('cors')
+app.use(cors({
+  origin: 'https://blogapp1-n5c0.onrender.com'
+}));
+
 // Importing database
 const mongodb = require('mongodb').MongoClient
 
