@@ -5,6 +5,15 @@ const app = exp()
 // Environment variables for secrecy
 require('dotenv').config()
 
+// CORS
+const cors = require('cors');
+// const corsOptions = {
+//   origin: 'http://localhost:4000',
+//   credentials: true,
+//   optionSuccessStatus: 200
+// }
+app.use(cors);
+
 // To parse body of request
 app.use(exp.json())
 
