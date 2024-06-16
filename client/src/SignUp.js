@@ -24,7 +24,7 @@ export default function SignUp() {
       <div className='row mx-auto w-50 bg-right mt-5 rounded text-white' style={{ minHeight: "400px" }}>
         <div className='col-6 rounded-end-circle bg-left justify-content-center align-items-center d-flex flex-column'>
           <h1 className='text-center mb-4' style={{ color: '#FFD23F' }}>Already Registered?</h1>
-          <Link to='' className='link-info fs-5'>Login</Link>
+          <Link to='/' className='link-info fs-5'>Login</Link>
         </div>
         <div className='col-6 p-0'>
           <form className='container p-4' onSubmit={handleSubmit(handleFormSubmit)}>
