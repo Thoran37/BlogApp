@@ -11,7 +11,7 @@ app.use(exp.json())
 // CORS
 const cors = require('cors')
 app.use(cors({
-  origin: 'https://blogapp1-n5c0.onrender.com'
+  origin: 'https://blogapp-frontend-u8oa.onrender.com'
 }));
 
 // Importing database
