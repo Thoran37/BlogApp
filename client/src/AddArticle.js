@@ -19,7 +19,7 @@ export default function AddArticle() {
     articleObj.comments = []
     articleObj.status = true
     console.log(articleObj)
-    let res = await axiosWithToken.post('http://localhost:4000/author-api/article', articleObj)
+    let res = await axiosWithToken.post('https://blogapp-2oh2.onrender.com/author-api/article', articleObj)
     console.log(res)
     if (res.data.message === 'New Article created')
       navigate(`/author-profile/article-by-author/${currentUser.username}`)

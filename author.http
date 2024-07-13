@@ -1,4 +1,4 @@
-POST http://localhost:4000/author-api/register
+POST https://blogapp-2oh2.onrender.com/author-api/register
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:4000/author-api/login
+POST https://blogapp-2oh2.onrender.com/author-api/login
 Content-Type: application/json
 
 {
@@ -19,7 +19,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:4000/author-api/article
+POST https://blogapp-2oh2.onrender.com/author-api/article
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhbHUiLCJpYXQiOjE3MTIwNjQ3NTUsImV4cCI6MTcxMjE1MTE1NX0.E1hc4gwYqVspfi7k7tLxjoABwJwRb8LQmuuzb8c11og
 
@@ -36,7 +36,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhb
 }
 
 ###
-PUT http://localhost:4000/author-api/article
+PUT https://blogapp-2oh2.onrender.com/author-api/article
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhbHUiLCJpYXQiOjE3MTExMTY4NjgsImV4cCI6MTcxMTIwMzI2OH0.uBJ5zziQt6-a40AEr5Nf9NIO6KqsVqncR5xreSnPO38
 
@@ -53,7 +53,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhb
 }
 
 ###
-PUT http://localhost:4000/author-api/article/1712064795
+PUT https://blogapp-2oh2.onrender.com/author-api/article/1712064795
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRob3JhbiIsImlhdCI6MTcxNTY5Njk3MiwiZXhwIjoxNzE1NzgzMzcyfQ.t_bARGnoqlbZT4c4JFlhFk9_lO6YYcXjyL67kJEl0-c
 
@@ -70,5 +70,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRob
 }
 
 ###
-GET http://localhost:4000/author-api/articles/thoran
+GET https://blogapp-2oh2.onrender.com/author-api/articles/thoran
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhbHUiLCJpYXQiOjE3MTEyNjUxNTMsImV4cCI6MTcxMTM1MTU1M30.nh0sVoOdO_4_17pWTRcTKHupZHDm6nOWhAW03bt-DXA

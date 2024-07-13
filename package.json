@@ -11,6 +11,6 @@
     "start-client":"cd client && npm run start"
   },
   "keywords": [],
-  "author": "",
+  "author": "Muvvala Thoran Chandra",
   "license": "ISC"
 }

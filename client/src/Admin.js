@@ -7,17 +7,17 @@ export default function Admin(props) {
   let [authors, setAuthors] = useState([])
 
   async function getAuthors() {
-    let res = await axiosWithToken.get("http://localhost:4000/admin-api/authors")
+    let res = await axiosWithToken.get("https://blogapp-2oh2.onrender.com/admin-api/authors")
     setAuthors(res.data.payload)
   }
 
   async function getArticles() {
-    let res = await axiosWithToken.get("http://localhost:4000/admin-api/articles")
+    let res = await axiosWithToken.get("https://blogapp-2oh2.onrender.com/admin-api/articles")
     setArticles(res.data.payload)
   }
 
   async function getUsers() {
-    let res = await axiosWithToken.get("http://localhost:4000/admin-api/users")
+    let res = await axiosWithToken.get("https://blogapp-2oh2.onrender.com/admin-api/users")
     setUsers(res.data.payload)
   }
 

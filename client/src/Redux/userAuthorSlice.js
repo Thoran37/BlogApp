@@ -5,9 +5,9 @@ export let loginThunk = createAsyncThunk('login-info', async (loginObj, thunkApi
   let res;
   try {
     if (loginObj.userType === 'user')
-      res = await axios.post("http://localhost:4000/user-api/login", loginObj)
+      res = await axios.post("https://blogapp-2oh2.onrender.com/user-api/login", loginObj)
     else
-      res = await axios.post("http://localhost:4000/author-api/login", loginObj)
+      res = await axios.post("https://blogapp-2oh2.onrender.com/author-api/login", loginObj)
     if (res.data.message === "Login successful")
       localStorage.setItem("token", res.data.token)
     else

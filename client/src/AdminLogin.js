@@ -12,7 +12,7 @@ export default function AdminLogin() {
   let navigate = useNavigate()
 
   async function admin(loginObj) {
-    let res = await axios.post("http://localhost:4000/admin-api/login", loginObj)
+    let res = await axios.post("https://blogapp-2oh2.onrender.com/admin-api/login", loginObj)
     if (res.data.message === "Login successful") {
       localStorage.setItem("token", res.data.token)
       navigate('/admin')

@@ -11,9 +11,9 @@ export default function SignUp() {
   async function handleFormSubmit(Obj) {
     let res;
     if (Obj.userType === 'user')
-      res = await axios.post("http://localhost:4000/user-api/register", Obj)
+      res = await axios.post("https://blogapp-2oh2.onrender.com/user-api/register", Obj)
     if (Obj.userType === 'author')
-      res = await axios.post("http://localhost:4000/author-api/register", Obj)
+      res = await axios.post("https://blogapp-2oh2.onrender.com/author-api/register", Obj)
     if (res.status !== 201)
       setErr(res.data.message)
   }

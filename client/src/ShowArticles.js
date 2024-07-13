@@ -10,7 +10,7 @@ export default function ShowArticles(props) {
 
   let res;
   async function getArticles() {
-    res = await axiosWithToken.get('http://localhost:4000/user-api/articles')
+    res = await axiosWithToken.get('https://blogapp-2oh2.onrender.com/user-api/articles')
     setArticlesList(res.data.payload)
   }
 
@@ -22,7 +22,7 @@ export default function ShowArticles(props) {
   }
 
   async function AuthorArticles() {
-    res = await axiosWithToken.get(`http://localhost:4000/author-api/articles/${currentUser.username}`)
+    res = await axiosWithToken.get(`https://blogapp-2oh2.onrender.com/author-api/articles/${currentUser.username}`)
     setArticlesList(res.data.payload)
   }
 

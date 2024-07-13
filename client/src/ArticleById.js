@@ -32,7 +32,7 @@ export default function ArticleById() {
     console.log('deleteOrRestoreArticle')
     let art = { ...currentArticle }
     delete art._id
-    let res = await axiosWithToken.put(`http://localhost:4000/author-api/article/${currentArticle.articleId}`, art)
+    let res = await axiosWithToken.put(`https://blogapp-2oh2.onrender.com/author-api/article/${currentArticle.articleId}`, art)
     console.log(res)
     if (res.data.message === 'article deleted' || res.data.message === 'article restored')
       setCurrentArticle({ ...currentArticle, status: res.data.payload })
@@ -46,7 +46,7 @@ export default function ArticleById() {
     let modArticle = { ...state, ...editedArticle };
     modArticle.dateOfModification = new Date();
     delete modArticle._id;
-    let res = await axiosWithToken.put("http://localhost:4000/author-api/article", modArticle);
+    let res = await axiosWithToken.put("https://blogapp-2oh2.onrender.com/author-api/article", modArticle);
     if (res.data.message === "Article modified") {
       setArticleEditStatus(false);
       navigate(`/author-profile/article/${editedArticle.articleId}`, { state: res.data.payload });
@@ -57,7 +57,7 @@ export default function ArticleById() {
     obj.username = currentUser.username
     let id = state.articleId
     console.log(obj)
-    let res = await axiosWithToken.put(`http://localhost:4000/user-api/comment/${id}`, obj)
+    let res = await axiosWithToken.put(`https://blogapp-2oh2.onrender.com/user-api/comment/${id}`, obj)
     console.log(res)
     console.log(res.data.payload)
     if (res.data.message !== 'Comment added')
